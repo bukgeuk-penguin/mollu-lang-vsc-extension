@@ -1,0 +1,39 @@
+{
+    "name": "mollu-lang",
+    "displayName": "mollu-lang",
+    "description": "몰?루",
+    "version": "1.0.0",
+    "author": {
+        "name": "Bukgeuk",
+        "email": "me@bukgeuk.dev",
+        "url": "https://github.com/Bukgeuk"
+    },
+    "engines": {
+        "vscode": "^1.64.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "mollulang",
+                "aliases": [
+                    "mollu-lang",
+                    "mollulang"
+                ],
+                "extensions": [
+                    ".mol"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "mollulang",
+                "scopeName": "source.mol",
+                "path": "./syntaxes/mollulang.tmLanguage.json"
+            }
+        ]
+    }
+}

@@ -1,0 +1,91 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "mollu-lang",
+	"fileTypes": [".mol"],
+	"patterns": [
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#jump"
+		},
+		{
+			"include": "#label"
+		},
+		{
+			"include": "#define-variable"
+		},
+		{
+			"include": "#use-variable"
+		},
+		{
+			"include": "#operator"
+		},
+		{
+			"include": "#input"
+		},
+		{
+			"include": "#output"
+		},
+		{
+			"include": "#comment"
+		}
+	],
+	"repository": {
+		"jump": {
+			"patterns": [{
+				"name": "keyword.control.jump",
+				"match": "몰\\?루|모올\\?루|모오올\\?루"
+			}]
+		},
+		"label": {
+			"patterns": [{
+				"name": "constant.character.escape",
+				"match": "왜(몰\\?|아!)루(우)*"
+			}]
+		},
+		"numbers": {
+			"patterns": [{
+				"name": "constant.numeric",
+				"match": "몰루|아루|모올루|아아루"
+			}]
+		},
+		"operator": {
+			"patterns": [{
+				"name": "keyword.operator",
+				"match": "(\\?{1,2})|(!{1,2})"
+			}]
+		},
+		"define-variable": {
+			"patterns": [{
+				"name": "keyword.other",
+				"match": "아!루우*"
+			}]
+		},
+		"use-variable": {
+			"patterns": [{
+				"name": "variable.name",
+				"match": "루우*"
+			}]
+		},
+		"input": {
+			"patterns": [{
+				"name": "string.quoted",
+				"match": "아{1,2}\\?루"
+			}]
+		},
+		"output": {
+			"patterns": [{
+				"name": "entity.name.function",
+				"match": "(몰|모올)!루"
+			}]
+		},
+		"comment": {
+			"patterns": [{
+				"name": "comment.line",
+				"match": "[가-힣ㄱ-ㅎ\\d\\w\\W]"
+			}]
+		}
+	},
+	"scopeName": "source.mol"
+}

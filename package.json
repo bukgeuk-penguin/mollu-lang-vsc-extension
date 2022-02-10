@@ -1,39 +1,48 @@
 {
-    "name": "mollu-lang",
-    "displayName": "mollu-lang",
-    "description": "몰?루",
-    "version": "1.0.0",
-    "author": {
-        "name": "Bukgeuk",
-        "email": "me@bukgeuk.dev",
-        "url": "https://github.com/Bukgeuk"
-    },
-    "engines": {
-        "vscode": "^1.64.0"
-    },
-    "categories": [
-        "Programming Languages"
-    ],
-    "contributes": {
-        "languages": [
-            {
-                "id": "mollulang",
-                "aliases": [
-                    "mollu-lang",
-                    "mollulang"
-                ],
-                "extensions": [
-                    ".mol"
-                ],
-                "configuration": "./language-configuration.json"
-            }
+  "name": "mollu-lang-vsc-extension",
+  "displayName": "mollu-lang",
+  "description": "몰?루",
+  "version": "1.0.0",
+  "author": "Bukgeuk <me@bukgeuk.dev> (https://github.com/Bukgeuk)",
+  "engines": {
+    "vscode": "^1.64.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "mollulang",
+        "aliases": [
+          "mollu-lang",
+          "mollulang"
         ],
-        "grammars": [
-            {
-                "language": "mollulang",
-                "scopeName": "source.mol",
-                "path": "./syntaxes/mollulang.tmLanguage.json"
-            }
-        ]
-    }
+        "extensions": [
+          ".mol"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "mollulang",
+        "scopeName": "source.mol",
+        "path": "./syntaxes/mollulang.tmLanguage.json"
+      }
+    ]
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bukgeuk-penguin/mollu-lang-vsc-extension.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bukgeuk-penguin/mollu-lang-vsc-extension/issues"
+  },
+  "homepage": "https://github.com/bukgeuk-penguin/mollu-lang-vsc-extension#readme"
 }

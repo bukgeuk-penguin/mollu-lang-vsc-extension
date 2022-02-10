@@ -41,7 +41,7 @@
 		"label": {
 			"patterns": [{
 				"name": "constant.character.escape",
-				"match": "왜(몰\\?|아!)루(우)*"
+				"match": "왜(몰\\?|아!)루우*"
 			}]
 		},
 		"numbers": {
@@ -81,9 +81,45 @@
 			}]
 		},
 		"comment": {
+			"patterns": [
+				{
+					"include": "#line-comment-1"
+				},
+				{
+					"include": "#line-comment-2"
+				},
+				{
+					"include": "#block-comment-1"
+				},
+				{
+					"include": "#block-comment-2"
+				}
+			]
+		},
+		"line-comment-1": {
 			"patterns": [{
 				"name": "comment.line",
-				"match": "[가-힣ㄱ-ㅎ\\d\\w\\W]"
+				"match": "\\/\\/[^\\n]*\\n?"
+			}]
+		},
+		"line-comment-2": {
+			"patterns": [{
+				"name": "comment.line",
+				"match": "=>[^\\n]*\\n?"
+			}]
+		},
+		"block-comment-1": {
+			"patterns": [{
+				"name": "comment.block",
+				"begin": "\\/\\*",
+				"end": "\\*\\/"
+			}]
+		},
+		"block-comment-2": {
+			"patterns": [{
+				"name": "comment.block",
+				"begin": "<--",
+				"end": "-->"
 			}]
 		}
 	},

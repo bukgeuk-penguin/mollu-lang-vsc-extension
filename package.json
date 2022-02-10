@@ -2,8 +2,11 @@
   "name": "mollu-lang-vsc-extension",
   "displayName": "mollu-lang",
   "description": "몰?루",
-  "version": "1.0.0",
-  "author": "Bukgeuk <me@bukgeuk.dev> (https://github.com/Bukgeuk)",
+  "version": "1.0.1",
+  "author": "Bukgeuk <contact@bukgeuk.dev> (https://github.com/Bukgeuk)",
+  "activationEvents": [
+    "onLanguage:mollulang"
+  ],
   "engines": {
     "vscode": "^1.64.0"
   },
@@ -33,7 +36,7 @@
       }
     ]
   },
-  "main": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -45,5 +48,11 @@
   "bugs": {
     "url": "https://github.com/bukgeuk-penguin/mollu-lang-vsc-extension/issues"
   },
-  "homepage": "https://github.com/bukgeuk-penguin/mollu-lang-vsc-extension#readme"
+  "homepage": "https://github.com/bukgeuk-penguin/mollu-lang-vsc-extension#readme",
+  "keywords": [
+    "vsc-extension",
+    "mollulang",
+    "mollu-lang",
+    "programming-language"
+  ]
 }
